@@ -16,12 +16,17 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   title: "Free AI Caricature Maker",
-  description: "Turn your photo and text into a hilarious caricature in seconds.",
+  description:
+    "Turn your photo and text into a hilarious caricature in seconds. Powered by the nano-banana-2 model — free to try.",
   keywords: [
     "AI caricature maker",
     "caricature from photo",
     "cartoon avatar generator",
     "wedding caricature",
+    "nano-banana-2",
+    "nano banana",
+    "free AI caricature",
+    "free to try",
   ],
 };
 

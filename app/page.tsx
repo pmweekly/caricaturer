@@ -108,6 +108,13 @@ export default function HomePage() {
         </div>
       </section>
 
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="mt-3 rounded-lg border border-[#e6e6ef] bg-[#fbfbff] p-3 text-sm text-black/75">
+          <strong className="mr-2">Notice:</strong>
+          This site generates caricatures using the <em>nano-banana-2</em> model. It's free to try — enjoy unlimited playful caricatures in this preview.
+        </div>
+      </div>
+
       <section id="generator" className="px-4 py-10 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <CaricatureForm />
