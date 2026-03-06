@@ -116,10 +116,10 @@ export default function HomePage() {
           <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center">
             <div className="flex items-center gap-3">
               <span className="text-2xl">📢</span>
-              <p className="text-lg font-semibold">免费体验 — 基于 nano-banana-2 模型</p>
+              <p className="text-lg font-semibold">Free to try — powered by nano-banana-2</p>
             </div>
             <p className="mt-1 text-sm text-black/70 sm:ml-4">
-              本站使用 <strong>nano-banana-2</strong> 模型生成夸张头像，当前版本免费试用。点击“Create Caricatures”立刻开始体验。
+              This site generates exaggerated caricatures using the <strong>nano-banana-2</strong> model. Try it for free — click "Create Caricatures" to get started.
             </p>
           </div>
         </aside>
