@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-body), sans-serif;
+  color: #1d1d24;
+  background:
+    radial-gradient(circle at 4% 2%, rgba(255, 123, 71, 0.16), transparent 36%),
+    radial-gradient(circle at 95% 8%, rgba(120, 82, 255, 0.16), transparent 34%),
+    linear-gradient(180deg, #ffffff 0%, #fff8f5 48%, #ffffff 100%);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), sans-serif;
+}
+
+.grid-overlay {
+  background-image:
+    linear-gradient(rgba(29, 29, 36, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(29, 29, 36, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.88);
+  box-shadow: 0 16px 45px rgba(43, 36, 79, 0.12);
+}
+
+.soft-card {
+  border: 1px solid rgba(29, 29, 36, 0.08);
+  border-radius: 1rem;
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(29, 29, 36, 0.08);
+}
+
+.float-in {
+  animation: float-in 500ms ease-out both;
+}
+
+@keyframes float-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
