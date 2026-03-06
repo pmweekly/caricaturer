@@ -109,10 +109,20 @@ export default function HomePage() {
       </section>
 
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="mt-3 rounded-lg border border-[#e6e6ef] bg-[#fbfbff] p-3 text-sm text-black/75">
-          <strong className="mr-2">Notice:</strong>
-          This site generates caricatures using the <em>nano-banana-2</em> model. It's free to try — enjoy unlimited playful caricatures in this preview.
-        </div>
+        <aside
+          role="status"
+          className="mt-6 rounded-2xl bg-gradient-to-r from-[#fff6ee] via-[#fffdf8] to-[#f0f9ff] border border-[#ffd7b5] p-4 shadow-md"
+        >
+          <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center">
+            <div className="flex items-center gap-3">
+              <span className="text-2xl">📢</span>
+              <p className="text-lg font-semibold">免费体验 — 基于 nano-banana-2 模型</p>
+            </div>
+            <p className="mt-1 text-sm text-black/70 sm:ml-4">
+              本站使用 <strong>nano-banana-2</strong> 模型生成夸张头像，当前版本免费试用。点击“Create Caricatures”立刻开始体验。
+            </p>
+          </div>
+        </aside>
       </div>
 
       <section id="generator" className="px-4 py-10 sm:px-6 lg:px-8">
