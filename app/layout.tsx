@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Manrope, Sora } from "next/font/google";
+import { Providers } from "@/components/providers";
 import "./globals.css";
 
 const sora = Sora({
@@ -15,9 +17,9 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Free AI Caricature Maker",
+  title: "AI Wedding Caricature Maker",
   description:
-    "Turn your photo and text into a hilarious caricature in seconds. Powered by the nano-banana-2 model — free to try.",
+    "Turn your photo into a wedding-ready caricature illustration with preset prompts, Google sign-in, and premium upgrades.",
   keywords: [
     "AI caricature maker",
     "caricature from photo",
@@ -35,11 +37,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+  const shouldLoadGa = process.env.NODE_ENV === "production" && Boolean(gaId);
+
   return (
     <html lang="en">
+      <head>
+        <meta name="google-site-verification" content="TgMP1zp2GGrnbhH6aTl64lRe_7SAq781duPVwd-6SU0" />
+      </head>
       <body className={`${sora.variable} ${manrope.variable} antialiased`}>
-        {children}
+        <Providers>{children}</Providers>
       </body>
+      {shouldLoadGa ? <GoogleAnalytics gaId={gaId as string} /> : null}
     </html>
   );
 }
